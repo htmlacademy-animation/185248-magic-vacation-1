@@ -176,7 +176,7 @@
     transform: translateY(5px);
     transition-property: transform, opacity;
     transition-duration: 0.5s, 0.5s;
-    transition-timing-function: ease, ease;
+    transition-timing-function: ease-out, ease;
 
     &:nth-of-type(2) {
       transition-delay: 0.15s;
