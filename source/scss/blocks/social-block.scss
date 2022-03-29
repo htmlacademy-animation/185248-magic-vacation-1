@@ -217,9 +217,9 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
-  transition-property: color;
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+  transition-property: color, background-color, border-color;
+  transition-duration: 0.5s, 0.5s, 0.5s;
+  transition-timing-function: ease, ease, ease;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
