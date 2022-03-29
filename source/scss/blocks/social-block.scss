@@ -197,10 +197,20 @@
 
     @media (max-width: $tablet) and (orientation: portrait) {
       margin: 0 1.25rem;
+
+      .page-header--menu-opened & {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: $mobile) and (orientation: landscape) {
       margin: 0 1.25rem;
+
+      .page-header--menu-opened & {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   }
 
