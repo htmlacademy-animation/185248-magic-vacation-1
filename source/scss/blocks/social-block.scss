@@ -21,6 +21,48 @@
   transition-duration: 0.5s;
   transition-timing-function: ease;
 
+  /* Цвет иконки */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social & {
+    color: $c-purple;
+  }
+
+  /* Цвет иконки:hover */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social &:hover {
+    color: $c-dark;
+  }
+
+  /* Активный блок ссылок: цвет иконки без ховера */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social .social-block--active &:not(:hover) {
+    color: $c-light;
+  }
+
+  /* Активный блок ссылок: цвет кружочка без ховера */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social .social-block--active &:not(:hover)::before {
+    background-color: $c-dark;
+    border: 2px solid $c-dark;
+  }
+
+  /* Цвет иконки в фокусе */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social &:focus {
+    color: $c-dark;
+  }
+
+  /* Цвет кружочка в фокусе */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social &:focus::before {
+    border-color: $c-dark;
+  }
+
+  /* Цвет кружочка:active */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social &:active,
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social &:active:focus {
+    color: $c-light;
+
+    &::before {
+      background-color: $c-dark;
+      border-color: $c-dark;
+    }
+  }
+
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
   }
@@ -230,6 +272,18 @@
   transition-property: color, background-color, border-color;
   transition-duration: 0.5s, 0.5s, 0.5s;
   transition-timing-function: ease, ease, ease;
+
+  /* Цвет ховера */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social &:hover {
+    color: $c-dark;
+  }
+
+  /* Цвет фокуса */
+  .page-header__menu--history.page-header__menu--history-1 ~ .page-header__social &:focus {
+    color: $c-dark;
+    background-color: $c-light;
+    border-color: $c-dark;
+  }
 
   @media (min-width: $stop-scaling) {
     width: 40px;

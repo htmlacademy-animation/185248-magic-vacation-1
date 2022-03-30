@@ -1,3 +1,6 @@
+import MenuClassControl from "./menuClassControl";
+const menuClassControl = new MenuClassControl();
+
 export default () => {
   let header = document.querySelector(`.js-header`);
   let menuToggler = document.querySelector(`.js-menu-toggler`);
@@ -16,10 +19,16 @@ export default () => {
   }
 
   for (let i = 0; i < menuLinks.length; i++) {
-    menuLinks[i].addEventListener(`click`, function () {
+    menuLinks[i].addEventListener(`click`, function (evt) {
+      console.log(evt.target.innerText);
       if (window.innerWidth < 1025) {
         header.classList.remove(`page-header--menu-opened`);
         document.body.classList.remove(`menu-opened`);
+      }
+      if (evt.target.innerText === `ИСТОРИЯ`) {
+        menuClassControl.addHistoryScreenClass();
+      } else {
+        menuClassControl.removeHistoryScreenClass();
       }
     });
   }
