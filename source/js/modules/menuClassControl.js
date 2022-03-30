@@ -1,8 +1,8 @@
-let pageHeaderMenu = document.querySelector(`.page-header__menu`);
+let pageHeaderMenuElement = document.querySelector(`.page-header__menu`);
 
 export default class MenuClassControl {
   constructor() {
-    this.element = pageHeaderMenu;
+    this.element = pageHeaderMenuElement;
   }
 
   addHistoryScreenClass() {

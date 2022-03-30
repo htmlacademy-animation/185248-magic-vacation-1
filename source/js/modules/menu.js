@@ -20,7 +20,6 @@ export default () => {
 
   for (let i = 0; i < menuLinks.length; i++) {
     menuLinks[i].addEventListener(`click`, function (evt) {
-      console.log(evt.target.innerText);
       if (window.innerWidth < 1025) {
         header.classList.remove(`page-header--menu-opened`);
         document.body.classList.remove(`menu-opened`);
