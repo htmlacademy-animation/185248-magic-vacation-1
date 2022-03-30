@@ -1,5 +1,5 @@
-import MenuClassControl from "./menuClassControl";
-const menuClassControl = new MenuClassControl();
+import ThemeControl from "./themeControl";
+const themeControl = new ThemeControl();
 
 export default () => {
   let header = document.querySelector(`.js-header`);
@@ -25,9 +25,9 @@ export default () => {
         document.body.classList.remove(`menu-opened`);
       }
       if (evt.target.innerText === `ИСТОРИЯ`) {
-        menuClassControl.addHistoryScreenClass();
+        themeControl.addThemeClass();
       } else {
-        menuClassControl.removeHistoryScreenClass();
+        themeControl.removeThemeClass();
       }
     });
   }
