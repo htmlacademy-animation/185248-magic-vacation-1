@@ -1,8 +1,8 @@
-let pageHeaderMenuElement = document.querySelector(`.page-header__menu`);
+let pageHeaderElement = document.querySelector(`.page-header`);
 
 export default class ThemeControl {
   constructor() {
-    this.element = pageHeaderMenuElement;
+    this.element = pageHeaderElement;
   }
 
   addThemeClass() {

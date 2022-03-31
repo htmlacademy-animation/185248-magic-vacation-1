@@ -1,0 +1,19 @@
+:root {
+  --theme-color-main: #5f458c;
+  --theme-color-hover: #a67ee5;
+}
+
+.theme.theme--1 {
+  --theme-color-main: #a67ee5;
+  --theme-color-hover: #5f458c;
+}
+
+.theme.theme--2 {
+  --theme-color-main: #3e72ee;
+  --theme-color-hover: #9fceff;
+}
+
+.theme.theme--3 {
+  --theme-color-main: #90b8e2;
+  --theme-color-hover: #3e72ee;
+}

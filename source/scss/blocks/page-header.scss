@@ -178,18 +178,6 @@
   line-height: 1.0418;
   color: $c-light;
 
-  &.theme.theme--1 {
-    a:hover,
-    a:focus {
-      color: $c-dark;
-      outline: none;
-
-      &::after {
-        background-color: $c-dark;
-      }
-    }
-  }
-
   @media (min-width: $stop-scaling) {
     font-size: 12px;
   }
@@ -288,12 +276,12 @@
 
     &:hover,
     &:focus {
-      color: $c-purple;
+      color: var(--theme-color-hover);
       outline: none;
 
       &::after {
         opacity: 1;
-        background-color: $c-purple;
+        background-color: var(--theme-color-hover);
         width: 100%;
         right: auto;
         left: 0;

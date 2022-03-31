@@ -15,53 +15,11 @@
   display: block;
   width: 4rem;
   height: 4rem;
-  color: $c-dark;
+  color: var(--theme-color-main);
   border-radius: 50%;
   transition-property: color;
   transition-duration: 0.5s;
   transition-timing-function: ease;
-
-  /* Цвет иконки */
-  .theme.theme--1 ~ .page-header__social & {
-    color: $c-purple;
-  }
-
-  /* Цвет иконки:hover */
-  .theme.theme--1 ~ .page-header__social &:hover {
-    color: $c-dark;
-  }
-
-  /* Активный блок ссылок: цвет иконки без ховера */
-  .theme.theme--1 ~ .page-header__social .social-block--active &:not(:hover) {
-    color: $c-light;
-  }
-
-  /* Активный блок ссылок: цвет кружочка без ховера */
-  .theme.theme--1 ~ .page-header__social .social-block--active &:not(:hover)::before {
-    background-color: $c-dark;
-    border: 2px solid $c-dark;
-  }
-
-  /* Цвет иконки в фокусе */
-  .theme.theme--1 ~ .page-header__social &:focus {
-    color: $c-dark;
-  }
-
-  /* Цвет кружочка в фокусе */
-  .theme.theme--1 ~ .page-header__social &:focus::before {
-    border-color: $c-dark;
-  }
-
-  /* Цвет кружочка:active */
-  .theme.theme--1 ~ .page-header__social &:active,
-  .theme.theme--1 ~ .page-header__social &:active:focus {
-    color: $c-light;
-
-    &::before {
-      background-color: $c-dark;
-      border-color: $c-dark;
-    }
-  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -94,7 +52,7 @@
 
   &:hover,
   .social-block--active & {
-    color: $c-purple;
+    color: var(--theme-color-hover);
 
     &::before {
       width: 112.5%;
@@ -109,16 +67,16 @@
   .social-block--active &:not(:hover)::before {
     width: 100%;
     height: 100%;
-    background-color: $c-purple;
-    border: 2px solid $c-purple;
+    background-color: var(--theme-color-hover);
+    border: 2px solid var(--theme-color-hover);
   }
 
   &:focus {
-    color: $c-purple;
+    color: var(--theme-color-hover);
     outline: none;
 
     &::before {
-      border-color: $c-purple;
+      border-color: var(--theme-color-hover);
     }
 
     & + .social-block__list {
@@ -140,8 +98,8 @@
     &::before {
       width: 100%;
       height: 100%;
-      background-color: $c-purple;
-      border-color: $c-purple;
+      background-color: var(--theme-color-hover);
+      border-color: var(--theme-color-hover);
     }
   }
 }
@@ -301,13 +259,13 @@
   }
 
   &:hover {
-    color: $c-purple;
+    color: var(--theme-color-hover);
   }
 
   &:focus {
-    color: $c-purple;
+    color: var(--theme-color-hover);
     background-color: $c-light;
-    border-color: $c-purple;
+    border-color: var(--theme-color-hover);
     outline: none;
   }
 
