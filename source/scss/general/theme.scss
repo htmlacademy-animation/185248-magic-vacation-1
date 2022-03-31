@@ -17,3 +17,21 @@
   --theme-color-main: #90b8e2;
   --theme-color-hover: #3e72ee;
 }
+
+@media (max-width: $tablet) and (orientation: portrait) {
+  .theme.theme--1,
+  .theme.theme--2,
+  .theme.theme--3 {
+    --theme-color-main: #5f458c;
+    --theme-color-hover: #a67ee5;
+  }
+}
+
+@media (max-width: $mobile) and (orientation: landscape) {
+  .theme.theme--1,
+  .theme.theme--2,
+  .theme.theme--3 {
+    --theme-color-main: #5f458c;
+    --theme-color-hover: #a67ee5;
+  }
+}

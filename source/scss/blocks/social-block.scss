@@ -231,18 +231,6 @@
   transition-duration: 0.5s, 0.5s, 0.5s;
   transition-timing-function: ease, ease, ease;
 
-  /* Цвет ховера */
-  .theme.theme--1 ~ .page-header__social &:hover {
-    color: $c-dark;
-  }
-
-  /* Цвет фокуса */
-  .theme.theme--1 ~ .page-header__social &:focus {
-    color: $c-dark;
-    background-color: $c-light;
-    border-color: $c-dark;
-  }
-
   @media (min-width: $stop-scaling) {
     width: 40px;
     height: 40px;
