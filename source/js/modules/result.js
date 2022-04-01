@@ -1,6 +1,6 @@
 export default () => {
-  let showResultEls = document.querySelectorAll(`.js-show-result`);
-  let results = document.querySelectorAll(`.screen--result`);
+  const showResultEls = document.querySelectorAll(`.js-show-result`);
+  const results = document.querySelectorAll(`.screen--result`);
   if (results.length) {
     for (let i = 0; i < showResultEls.length; i++) {
       showResultEls[i].addEventListener(`click`, function () {
@@ -17,7 +17,7 @@ export default () => {
       });
     }
 
-    let playBtn = document.querySelector(`.js-play`);
+    const playBtn = document.querySelector(`.js-play`);
     if (playBtn) {
       playBtn.addEventListener(`click`, function () {
         [].slice.call(results).forEach(function (el) {

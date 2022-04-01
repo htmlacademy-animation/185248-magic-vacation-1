@@ -4,7 +4,7 @@ const themeControl = new ThemeControl();
 
 export default () => {
   let storySlider;
-  let sliderContainer = document.getElementById(`story`);
+  const sliderContainer = document.getElementById(`story`);
   sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
 
   const setSlider = function () {

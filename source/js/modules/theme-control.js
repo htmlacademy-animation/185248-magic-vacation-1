@@ -1,4 +1,4 @@
-let pageHeaderElement = document.querySelector(`.page-header`);
+const pageHeaderElement = document.querySelector(`.page-header`);
 
 export default class ThemeControl {
   constructor() {
