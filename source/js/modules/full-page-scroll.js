@@ -1,5 +1,5 @@
 import throttle from 'lodash/throttle';
-import ThemeControl from "./themeControl";
+import ThemeControl from "./theme-control";
 
 export default class FullPageScroll {
   constructor() {

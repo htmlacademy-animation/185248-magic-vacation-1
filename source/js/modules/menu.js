@@ -1,4 +1,4 @@
-import ThemeControl from "./themeControl";
+import ThemeControl from "./theme-control";
 const themeControl = new ThemeControl();
 
 export default () => {
