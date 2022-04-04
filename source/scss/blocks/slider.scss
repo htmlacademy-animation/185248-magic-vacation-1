@@ -142,6 +142,8 @@
     .swiper-slide-prev & {
       opacity: 0;
       transform: translateX(20px);
+      transition-duration: 0s, 0s;
+      transition-delay: 0s, 0s;
     }
   }
 
@@ -158,6 +160,8 @@
     .swiper-slide-prev & {
       opacity: 0;
       transform: translateX(20px);
+      transition-duration: 0s, 0s;
+      transition-delay: 0s, 0s;
     }
   }
 }
