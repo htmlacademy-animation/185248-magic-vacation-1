@@ -97,11 +97,11 @@
   font-size: 1.8rem;
   line-height: 2rem;
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateX(1.5rem);
 
   .screen--story:not(.active) & {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(1.5rem);
   }
 
   .swiper-slide-active & {
@@ -141,7 +141,7 @@
     .swiper-slide-next &,
     .swiper-slide-prev & {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateX(1.5rem);
       transition-duration: 0s, 0s;
       transition-delay: 0s, 0s;
     }
@@ -159,7 +159,7 @@
     .swiper-slide-next &,
     .swiper-slide-prev & {
       opacity: 0;
-      transform: translateX(20px);
+      transform: translateX(1.5rem);
       transition-duration: 0s, 0s;
       transition-delay: 0s, 0s;
     }
