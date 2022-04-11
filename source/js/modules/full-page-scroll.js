@@ -1,4 +1,5 @@
 import throttle from 'lodash/throttle';
+import ThemeControl from "./theme-control";
 
 export default class FullPageScroll {
   constructor() {
@@ -8,6 +9,7 @@ export default class FullPageScroll {
 
     this.screenElements = document.querySelectorAll(`.screen:not(.screen--result)`);
     this.menuElements = document.querySelectorAll(`.page-header__menu .js-menu-link`);
+    this.themeControl = new ThemeControl();
 
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
@@ -59,6 +61,12 @@ export default class FullPageScroll {
     this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
     setTimeout(() => {
       this.screenElements[this.activeScreen].classList.add(`active`);
+
+      if (this.screenElements[this.activeScreen].classList.contains(`screen--story`)) {
+        this.themeControl.addThemeClass();
+      } else {
+        this.themeControl.removeThemeClass();
+      }
     }, 100);
   }
 
