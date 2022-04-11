@@ -1873,7 +1873,7 @@ img {
   font-size: 2.4rem;
   line-height: 1.27;
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateY(1.5rem);
   transition-property: transform, opacity;
   transition-duration: 0.7s, 1s;
   transition-timing-function: ease-out, ease;
@@ -3713,11 +3713,11 @@ img {
   font-size: 1.8rem;
   line-height: 2rem;
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateX(1.5rem);
 }
 .screen--story:not(.active) .slider__item-text {
   opacity: 0;
-  transform: translateX(20px);
+  transform: translateX(1.5rem);
 }
 .swiper-slide-active .slider__item-text {
   opacity: 1;
@@ -3755,7 +3755,7 @@ img {
   }
   .swiper-slide-next .slider__item-text, .swiper-slide-prev .slider__item-text {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(1.5rem);
     transition-duration: 0s, 0s;
     transition-delay: 0s, 0s;
   }
@@ -3772,7 +3772,7 @@ img {
   }
   .swiper-slide-next .slider__item-text, .swiper-slide-prev .slider__item-text {
     opacity: 0;
-    transform: translateX(20px);
+    transform: translateX(1.5rem);
     transition-duration: 0s, 0s;
     transition-delay: 0s, 0s;
   }
@@ -3990,9 +3990,9 @@ img {
   background-color: #ffffff;
   border: 2px solid #ffffff;
   z-index: -1;
-  transition-property: width, height, background-color, border;
-  transition-duration: 0.5s, 0.5s, 1s, 1s;
-  transition-timing-function: ease, ease, ease, ease;
+  transition-property: background-color, border, transform;
+  transition-duration: 1s, 1s, 1s;
+  transition-timing-function: ease, ease, ease;
 }
 .social-block__toggler svg {
   position: absolute;
@@ -4007,15 +4007,13 @@ img {
   color: var(--theme-color-hover);
 }
 .social-block__toggler:hover::before, .social-block--active .social-block__toggler::before {
-  width: 112.5%;
-  height: 112.5%;
+  transform: scale(1.125) translate(-45%, -45%);
 }
 .social-block--active .social-block__toggler:not(:hover) {
   color: #ffffff;
 }
 .social-block--active .social-block__toggler:not(:hover)::before {
-  width: 100%;
-  height: 100%;
+  transform: scale(1) translate(-50%, -50%);
   background-color: var(--theme-color-hover);
   border: 2px solid var(--theme-color-hover);
 }
@@ -4114,7 +4112,7 @@ img {
   flex: none;
   margin-bottom: 0.5rem;
   opacity: 0;
-  transform: translateY(5px);
+  transform: translateY(0.8rem);
   transition-property: transform, opacity;
   transition-duration: 0.5s, 0.5s;
   transition-timing-function: ease-out, ease;
