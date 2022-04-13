@@ -268,7 +268,7 @@
       content: "";
       position: absolute;
       bottom: 0;
-      width: 0%;
+      width: 0;
       height: 2px;
       background-color: $c-light;
       right: 0;
@@ -287,9 +287,15 @@
       }
     }
 
-    &.active {
+    .loaded &.active {
       &::after {
+        right: auto;
+        left: 0;
         width: 100%;
+        transition-property: width;
+        transition-duration: 0.5s;
+        transition-timing-function: cubic-bezier(0, 0.5, 0.4, 1);
+        transition-delay: 0.3s;
       }
     }
 
