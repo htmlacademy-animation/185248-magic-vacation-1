@@ -140,6 +140,15 @@
 .page-header__nav {
   display: flex;
   align-items: center;
+  opacity: 0;
+
+  .loaded & {
+    opacity: 1;
+    transition-property: opacity;
+    transition-duration: 1.5s;
+    transition-timing-function: cubic-bezier(0, 0.5, 0.4, 1);
+    transition-delay: 0.3s;
+  }
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;

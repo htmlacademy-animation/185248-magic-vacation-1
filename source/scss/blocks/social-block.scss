@@ -38,9 +38,20 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition-property: background-color, border, transform;
-    transition-duration: 1s, 1s, 1s;
-    transition-timing-function: ease, ease, ease;
+    transform: scale(0);
+    transition-property: background-color, border;
+    transition-duration: 1s, 1s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+
+    .loaded & {
+      transform: scale(1) translate(-50%, -50%);
+      transition-property: transform;
+      transition-duration: 0.4s;
+      transition-timing-function: cubic-bezier(0, 0.5, 0.4, 1.4);
+      transition-delay: 0.4s;
+      transform-origin: 0 0;
+    }
   }
 
   svg {
@@ -55,7 +66,11 @@
     color: var(--theme-color-hover);
 
     &::before {
-      transform: scale(1.125) translate(-45%, -45%);
+      transform: scale(1.125) translate(-50%, -50%);
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
     }
   }
 
@@ -64,6 +79,10 @@
 
     &::before {
       transform: scale(1) translate(-50%, -50%);
+      transition-property: transform;
+      transition-duration: 1s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
       background-color: var(--theme-color-hover);
       border: 2px solid var(--theme-color-hover);
     }
