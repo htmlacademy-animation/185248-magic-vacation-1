@@ -35,6 +35,16 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  transform: translateX(-5rem);
+  opacity: 0;
+
+  .loaded & {
+    transform: translateX(0);
+    opacity: 1;
+    transition-property: transform, opacity;
+    transition-duration: 1.5s, 1.5s;
+    transition-timing-function: cubic-bezier(0, 0.5, 0.4, 1), cubic-bezier(0, 0.5, 0.4, 1);
+  }
 
   @media (min-width: $stop-scaling) {
     top: -5px;
