@@ -63,17 +63,16 @@
     transform: translateY(0);
   }
 
-  .screen--prizes:not(.active) & {
-    z-index: 0;
+  .loaded .background-screen:not(.active) & {
     transform: translateY(100%);
   }
 
-  .screen--prizes.active & {
-    z-index: 1;
+  .loaded .background-screen.active & {
     transform: translateY(0);
     transition-property: transform;
-    transition-duration: 0.7s;
+    transition-duration: 0.2s;
     transition-timing-function: cubic-bezier(0, 0.5, 0.4, 1);
+    transition-delay: 0.3s;
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
