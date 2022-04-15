@@ -6,9 +6,13 @@ export default class FullPageScroll {
     this.THROTTLE_TIMEOUT = 1000;
     this.scrollFlag = true;
     this.timeout = null;
+    this.addBackground = false;
 
     this.screenElements = document.querySelectorAll(`.screen:not(.screen--result)`);
     this.menuElements = document.querySelectorAll(`.page-header__menu .js-menu-link`);
+    this.backgroundScreen = document.querySelector(`.background-screen`);
+    this.historyScreen = document.querySelector(`.screen--story`);
+    this.prizesScreen = document.querySelector(`.screen--prizes`);
     this.themeControl = new ThemeControl();
 
     this.activeScreen = 0;
@@ -43,14 +47,31 @@ export default class FullPageScroll {
 
   onUrlHashChanged() {
     const newIndex = Array.from(this.screenElements).findIndex((screen) => location.hash.slice(1) === screen.id);
+    this.addBackground = this.activeScreen === 1 && newIndex === 2;
     this.activeScreen = (newIndex < 0) ? 0 : newIndex;
     this.changePageDisplay();
   }
 
   changePageDisplay() {
-    this.changeVisibilityDisplay();
-    this.changeActiveMenuItem();
-    this.emitChangeDisplayEvent();
+    if (this.addBackground) {
+      this.backgroundScreen.classList.add(`active`);
+      this.historyScreen.classList.add(`bg-active`);
+      this.prizesScreen.classList.add(`bg-active`);
+
+      setTimeout(() => {
+        this.changeVisibilityDisplay();
+        this.changeActiveMenuItem();
+        this.emitChangeDisplayEvent();
+        this.historyScreen.classList.remove(`bg-active`);
+      }, 500);
+
+    } else {
+      this.backgroundScreen.classList.remove(`active`);
+      this.prizesScreen.classList.remove(`bg-active`);
+      this.changeVisibilityDisplay();
+      this.changeActiveMenuItem();
+      this.emitChangeDisplayEvent();
+    }
   }
 
   changeVisibilityDisplay() {
